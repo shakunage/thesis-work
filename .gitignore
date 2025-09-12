@@ -209,3 +209,5 @@ __marimo__/
 # DS_Store
 .DS_Store
 
+# model
+data/finbert_sentiment_model/
