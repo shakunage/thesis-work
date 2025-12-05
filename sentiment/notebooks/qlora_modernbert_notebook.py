@@ -6,14 +6,14 @@
 # ============================================================================
 
 # Install required packages (run this cell first)
-!pip install transformers==4.36.0
-!pip install datasets==2.14.0
-!pip install peft==0.6.0
-!pip install bitsandbytes==0.41.3
-!pip install accelerate==0.24.0
-!pip install torch torchvision torchaudio
-!pip install scikit-learn
-!pip install wandb  # Optional: for experiment tracking
+# !pip install transformers==4.36.0
+# !pip install datasets==2.14.0
+# !pip install peft==0.6.0
+# !pip install bitsandbytes==0.41.3
+# !pip install accelerate==0.24.0
+# !pip install torch torchvision torchaudio
+# !pip install scikit-learn
+# !pip install wandb  # Optional: for experiment tracking
 
 # ============================================================================
 # SECTION 2: IMPORTS AND CONFIGURATION
@@ -131,24 +131,7 @@ class SentimentDataset(Dataset):
             'labels': torch.tensor(label, dtype=torch.long)
         }
 
-def create_sample_data():
-    """Create sample sentiment data - replace with your actual dataset"""
-    sample_data = {
-        'text': [
-            "The stock market showed strong gains today",
-            "Company profits are declining rapidly",
-            "Economic indicators remain stable",
-            "Investors are optimistic about future growth",
-            "Market volatility continues to concern traders",
-            "The quarterly earnings report exceeded expectations",
-            "Bond yields are falling significantly",
-            "Consumer confidence has improved this month",
-            "The central bank maintains current interest rates",
-            "Tech stocks experienced mixed trading results"
-        ] * 100,  # Repeat for more data
-        'label': [2, 0, 1, 2, 0, 2, 0, 2, 1, 1] * 100  # 0=negative, 1=neutral, 2=positive
-    }
-    return pd.DataFrame(sample_data)
+
 
 def prepare_dataset():
     """Prepare and split dataset"""
