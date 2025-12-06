@@ -85,7 +85,10 @@ def kauppalehti_scraper(thread_url, company_name, ticker):
                             data_content = post.get_attribute('data-content')
                             user_id = post.locator('h4.message-name > a').get_attribute('data-user-id')
                             message_href = post.locator('.message-attribution-gadget').get_attribute('href')
-                            datetime_attr = post.locator("time").get_attribute("datetime")
+                            
+                            # Get datetime - if multiple time elements, take the last one
+                            time_locator = post.locator("time")
+                            datetime_attr = time_locator.last.get_attribute("datetime") if time_locator.count() > 0 else None
                             
                             # Skip post if critical data is missing
                             if not all([data_content, user_id, message_href, datetime_attr]):
