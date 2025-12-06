@@ -1,0 +1,759 @@
+- url: "https://keskustelu.kauppalehti.fi/threads/betolar.249000/"
+  forum: Kauppalehti
+  company: Betolar
+  ticker: BETOLAR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/tekova-rakentaa-kannattavasti.249281/"
+  forum: Kauppalehti
+  company: Tekova
+  ticker: TEKOVA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/framery-rahaa-puhelinkopeilla.249537/"
+  forum: Kauppalehti
+  company: Framery
+  ticker: FRAMERY
+
+- url: "https://keskustelu.kauppalehti.fi/threads/lassila-ja-tikanoja.238346/"
+  forum: Kauppalehti
+  company: Lassila & Tikanoja
+  ticker: LAT1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kh-group-khg.248760/"
+  forum: Kauppalehti
+  company: KH Group
+  ticker: KHG
+
+- url: "https://keskustelu.kauppalehti.fi/threads/digia.206341/"
+  forum: Kauppalehti
+  company: Digia
+  ticker: DIGIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/neste-puhtaampaa-huomista-tankkiin.244331/"
+  forum: Kauppalehti
+  company: Neste
+  ticker: NESTE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/bittium-oyj-osa-10.247894/"
+  forum: Kauppalehti
+  company: Bittium
+  ticker: BITTI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/upm-hyva-sijoitus-kympilla.80168/"
+  forum: Kauppalehti
+  company: UPM-Kymmene
+  ticker: UPM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/capman.194271/"
+  forum: Kauppalehti
+  company: Capman
+  ticker: CAPMAN
+
+- url: "https://keskustelu.kauppalehti.fi/threads/hkfoods.249124/"
+  forum: Kauppalehti
+  company: HKFoods
+  ticker: HKFOODS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/summa-defence.249141/"
+  forum: Kauppalehti
+  company: Summa Defence
+  ticker: SUMMA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/wartsila.222151/"
+  forum: Kauppalehti
+  company: Wärtsilä
+  ticker: WRT1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/optomed.247878/"
+  forum: Kauppalehti
+  company: Optomed
+  ticker: OPTOMED
+
+- url: "https://keskustelu.kauppalehti.fi/threads/miksi-kesko-ei-kiinnosta.229849/"
+  forum: Kauppalehti
+  company: Kesko
+  ticker: KESKOB
+
+- url: "https://keskustelu.kauppalehti.fi/threads/outokumpu-2025.249252/"
+  forum: Kauppalehti
+  company: Outokumpu
+  ticker: OUT1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/endomines.218460/"
+  forum: Kauppalehti
+  company: Endomines Finland
+  ticker: PAMPALO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/tecnotree.246906/"
+  forum: Kauppalehti
+  company: Tecnotree
+  ticker: TEM1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/miten-nokian-renkaat-parjaavat-nykyisessa-tilanteessa.218598/"
+  forum: Kauppalehti
+  company: Nokian Renkaat
+  ticker: TYRES
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nordea.248468/"
+  forum: Kauppalehti
+  company: Nordea
+  ticker: NDA-FI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/turkistuottajat-saga-furs.165009/"
+  forum: Kauppalehti
+  company: Saga Furs
+  ticker: SAGCV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/stora-enso.136362/"
+  forum: Kauppalehti
+  company: Stora Enso
+  ticker: STERV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nokia.248965/"
+  forum: Kauppalehti
+  company: Nokia
+  ticker: NOKIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/mita-biohitilla-tapahtuu-osa-3.239169/"
+  forum: Kauppalehti
+  company: Biohit
+  ticker: BIOBV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/afarak-afrikasta-arvoa.227982/"
+  forum: Kauppalehti
+  company: Afarak
+  ticker: AFAGR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/finnair-todellinen-kaanneyhtio.210712/"
+  forum: Kauppalehti
+  company: Finnari
+  ticker: FIA1S
+
+- url: "https://keskustelu.kauppalehti.fi/threads/orion.215647/"
+  forum: Kauppalehti
+  company: Orion
+  ticker: ORNBV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/incap.236959/"
+  forum: Kauppalehti
+  company: Incap
+  ticker: ICP1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/oriolan-valtaus.224144/"
+  forum: Kauppalehti
+  company: Oriola
+  ticker: ORIOLA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/ssh-n-kasvu-globaalisti-merkittavaksi-yhtioksi.245684/"
+  forum: Kauppalehti
+  company: SSH Communications Security
+  ticker: SSH1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/sotkamo-silver-hohdokasta-hopeaa.249086/"
+  forum: Kauppalehti
+  company: Sotkamo Silver 
+  ticker: SOSI1
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nexstim.240890/"
+  forum: Kauppalehti
+  company: Nexstim
+  ticker: NXTMH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/mandatum.248889/"
+  forum: Kauppalehti
+  company: Mandatum
+  ticker: MANTA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/revenio-syypaa-sun-hymyyn.242444/"
+  forum: Kauppalehti
+  company: Revenio
+  ticker: REG1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/tokmanni.242581/"
+  forum: Kauppalehti
+  company: Tokmanni
+  ticker: TOKMAN
+
+- url: "https://keskustelu.kauppalehti.fi/threads/verkkokauppa-com.240675/"
+  forum: Kauppalehti
+  company: Verkkokauppa.com
+  ticker: VERK
+
+- url: "https://keskustelu.kauppalehti.fi/threads/ssab.227067/"
+  forum: Kauppalehti
+  company: SSAB
+  ticker: SSABBH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nightingale-health.247908/"
+  forum: Kauppalehti
+  company: Nightingale Health
+  ticker: HEALTH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/panostaja-0-94-euroa.197414/"
+  forum: Kauppalehti
+  company: Panostaja
+  ticker: PNA1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/rapala-vmc-on-arvosijoittajan-valinta.158391/"
+  forum: Kauppalehti
+  company: Rapala
+  ticker: RAP1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kempower-defining-charging.248225/"
+  forum: Kauppalehti
+  company: Kempower
+  ticker: KEMPOWR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/keskisuomalainen.233851/"
+  forum: Kauppalehti
+  company: Keskisuomalainen
+  ticker: KSL
+
+- url: "https://keskustelu.kauppalehti.fi/threads/qpr-software.230837/
+  forum: Kauppalehti
+  company: QPR Software
+  ticker: QPR1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/wetteri-oyj.248471/"
+  forum: Kauppalehti
+  company: Wetteri
+  ticker: WETTERI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/sampo.209177/"
+  forum: Kauppalehti
+  company: Sampo
+  ticker: SAMPO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/aiforia.248237/"
+  forum: Kauppalehti
+  company: Aiforia
+  ticker: AIFORIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/ovaro-kiinteistohelmi-vai-riskisijoitus.246149/"
+  forum: Kauppalehti
+  company: Ovaro Kiinteistösijoitus
+  ticker: OVARO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/valmet.226280/"
+  forum: Kauppalehti
+  company: Valmet
+  ticker: VALMT
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kreate.247849/"
+  forum: Kauppalehti
+  company: Kreate
+  ticker: KREATE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/porssiin-tulossa-modulight-aiotko-liittya-omistajaksi.248160/"
+  forum: Kauppalehti
+  company: Modulight
+  ticker: MODU
+
+- url: "https://keskustelu.kauppalehti.fi/threads/glaston-pitkasta-aikaa-valoa.217700/"
+  forum: Kauppalehti
+  company: Glaston
+  ticker: GLA1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/ilkka-oyj.249133/"
+  forum: Kauppalehti
+  company: Ilkka
+  ticker: ILKKA1
+
+- url: "https://keskustelu.kauppalehti.fi/threads/metsa-board-2025.249243/"
+  forum: Kauppalehti
+  company: Metsä Board
+  ticker: METSB
+
+- url: "https://keskustelu.kauppalehti.fi/threads/fortum-osa-3.244328/"
+  forum: Kauppalehti
+  company: Fortum
+  ticker: FORTUM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/yit.223033/"
+  forum: Kauppalehti
+  company: YIT
+  ticker: YIT
+
+- url: "https://keskustelu.kauppalehti.fi/threads/elisa.223887/"
+  forum: Kauppalehti
+  company: Elisa
+  ticker: ELISA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/metso.243204/"
+  forum: Kauppalehti
+  company: Metso
+  ticker: METSO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/exel-tuottopotentiaali-loytyy.143018/"
+  forum: Kauppalehti
+  company: Exel Composites
+  ticker: EXL1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/dovre-vihrean-siirtyman-mahdollistaja.248358/"
+  forum: Kauppalehti
+  company: Dovre Group
+  ticker: DOV1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/qt-group-oyj.242677/"
+  forum: Kauppalehti
+  company: Qt Group
+  ticker: QTCOM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/alma-media.244992/"
+  forum: Kauppalehti
+  company: Alma Media
+  ticker: ALMA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/herantis-pharma.231250/"
+  forum: Kauppalehti
+  company: Herantis Pharma
+  ticker: HRTIS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/duell.248214/"
+  forum: Kauppalehti
+  company: Duell
+  ticker: DUELL
+
+- url: "https://keskustelu.kauppalehti.fi/threads/citycon.222637/"
+  forum: Kauppalehti
+  company: Citycon
+  ticker: CTY1S
+
+- url: "https://keskustelu.kauppalehti.fi/threads/terveystalon-anti.245202/"
+  forum: Kauppalehti
+  company: Terveystalo
+  ticker: TTALO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kamux.242817/"
+  forum: Kauppalehti
+  company: Kamux
+  ticker: KAMUX
+
+- url: "https://keskustelu.kauppalehti.fi/threads/cityvarasto.249465/"
+  forum: Kauppalehti
+  company: Cityvarasto
+  ticker: CVRS1
+
+- url: "https://keskustelu.kauppalehti.fi/threads/konecranes.219532/"
+  forum: Kauppalehti
+  company: Konecranes
+  ticker: KCR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/sitowise.247926/"
+  forum: Kauppalehti
+  company: Sitowise
+  ticker: SITOWS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/f-secure.208638/"
+  forum: Kauppalehti
+  company: F-Secure
+  ticker: FSECURE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/digital-workforce.248221/"
+  forum: Kauppalehti
+  company: Digital Workforce
+  ticker: DWF
+
+- url: "https://keskustelu.kauppalehti.fi/threads/remedy.245841/"
+  forum: Kauppalehti
+  company: Remedy Entertainment
+  ticker: REMEDY
+
+- url: "https://keskustelu.kauppalehti.fi/threads/componenta.227582/"
+  forum: Kauppalehti
+  company: Componenta
+  ticker: CTH1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/leaddesk.246570/"
+  forum: Kauppalehti
+  company: LeadDesk
+  ticker: LEADD
+
+- url: "https://keskustelu.kauppalehti.fi/threads/aspocomp-2021-2025.247978/"
+  forum: Kauppalehti
+  company: Aspocomp Group
+  ticker: ACG1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/bioretec.231562/"
+  forum: Kauppalehti
+  company: Bioretec
+  ticker: BRETEC
+
+- url: "https://keskustelu.kauppalehti.fi/threads/eagle-filters-group.249084/"
+  forum: Kauppalehti
+  company: Eagle Filters Group
+  ticker: EAGLE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/grk-vakaata-infrarakentamista.249322/"
+  forum: Kauppalehti
+  company: GRK Infra
+  ticker: GRK
+
+- url: "https://keskustelu.kauppalehti.fi/threads/gofore-listautumassa-first-northiin.245352/"
+  forum: Kauppalehti
+  company: Gofore
+  ticker: GOFORE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/huhtamaki-lintu-vai-kala.213555/"
+  forum: Kauppalehti
+  company: Huhtamäki
+  ticker: HUH1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kojamo.245933/"
+  forum: Kauppalehti
+  company: Kojamo
+  ticker: KOJAMO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/honkarakenne.228483/"
+  forum: Kauppalehti
+  company: Honkarakenne
+  ticker: HONBS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nanoform-harkitsee-listautumisantia.247433/"
+  forum: Kauppalehti
+  company: Nanoform
+  ticker: NANOFH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/oma-saastopankki-listautumisanti.246339/"
+  forum: Kauppalehti
+  company: Oma Säästöpankki
+  ticker: OMASP
+
+- url: "https://keskustelu.kauppalehti.fi/threads/robit-rocktools.239536/"
+  forum: Kauppalehti
+  company: Robit
+  ticker: ROBIT
+
+- url: "https://keskustelu.kauppalehti.fi/threads/inderes-listautuu.248158/"
+  forum: Kauppalehti
+  company: Inderes
+  ticker: INDERES
+
+- url: "https://keskustelu.kauppalehti.fi/threads/raision-nousu.206333/"
+  forum: Kauppalehti
+  company: Raisio
+  ticker: RAIVV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/lehto-group.242646/"
+  forum: Kauppalehti
+  company: Lehto Group
+  ticker: LEHTO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/evli-listautuu.241438/"
+  forum: Kauppalehti
+  company: Evli
+  ticker: EVLI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/aspo.247082/"
+  forum: Kauppalehti
+  company: Aspo
+  ticker: ASPO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/tulikivi-2022.248487/"
+  forum: Kauppalehti
+  company: Tulikivi
+  ticker: TULAV 
+
+- url: "https://keskustelu.kauppalehti.fi/threads/teleste.226874/"
+  forum: Kauppalehti
+  company: Teleste
+  ticker: TLT1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/harvia.245730/"
+  forum: Kauppalehti
+  company: Harvia
+  ticker: HARVIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/enersense-international-oyj.245828/"
+  forum: Kauppalehti
+  company: Enersense International
+  ticker: ESENSE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/eezy-oyj-sijoituskohteena.248287/"
+  forum: Kauppalehti
+  company: Eezy
+  ticker: EEZY
+
+- url: "https://keskustelu.kauppalehti.fi/threads/merus-power.248018/"
+  forum: Kauppalehti
+  company: Merus Power
+  ticker: MERUS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kalmar.249119/"
+  forum: Kauppalehti
+  company: Kalmar
+  ticker: KALMAR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/posti.249470/"
+  forum: Kauppalehti
+  company: Posti Group
+  ticker: POSTI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kesla-unohdettu-kaanneyhtio.229852/"
+  forum: Kauppalehti
+  company: Kesla
+  ticker: KELAS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/marimekko-pienta-analyysia.206832/"
+  forum: Kauppalehti
+  company: Marimekko
+  ticker: MEKKO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/raute.225992/"
+  forum: Kauppalehti
+  company: Raute
+  ticker: RAUTE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/detection-technology.242094/"
+  forum: Kauppalehti
+  company: Detection Technology
+  ticker: DETEC
+
+- url: "https://keskustelu.kauppalehti.fi/threads/uusi-solteq.198361/"
+  forum: Kauppalehti
+  company: Solteq
+  ticker: SOLTEQ
+
+- url: "https://keskustelu.kauppalehti.fi/threads/taaleri-taala-1-4-2016.242541/"
+  forum: Kauppalehti
+  company: Taaleri
+  ticker: TAALA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/lindex-group.249039/"
+  forum: Kauppalehti
+  company: Lindex Group
+  ticker: LINDEX
+
+- url: "https://keskustelu.kauppalehti.fi/threads/piippo.238378/"
+  forum: Kauppalehti
+  company: Piippo
+  ticker: PIIPPO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/aktia.213809/"
+  forum: Kauppalehti
+  company: Aktia Pankki
+  ticker: AKTIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/noho-partners-oyj.246604/"
+  forum: Kauppalehti
+  company: NoHo Partners
+  ticker: NOHO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kemira.237245/"
+  forum: Kauppalehti
+  company: Kemira
+  ticker: KEMIRA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/scanfil-vahva-vedatys.230226/"
+  forum: Kauppalehti
+  company: SCANFL
+  ticker: Scanfil
+
+- url: "https://keskustelu.kauppalehti.fi/threads/telia.242679/"
+  forum: Kauppalehti
+  company: Telia Company
+  ticker: TELIA1
+
+- url: "https://keskustelu.kauppalehti.fi/threads/olvi-defensiivinen-kasvuyhtio.192419/"
+  forum: Kauppalehti
+  company: Olvi
+  ticker: OLVAS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/fondia-first-northiin.244220/"
+  forum: Kauppalehti
+  company: Fondia
+  ticker: FONDIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/ponsse-oyj.246579/"
+  forum: Kauppalehti
+  company: Ponsse
+  ticker: PON1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/atria.219768/"
+  forum: Kauppalehti
+  company: Atria
+  ticker: ATRAV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/titanium-rahastoyhtio-oy.245121/"
+  forum: Kauppalehti
+  company: Titanium
+  ticker: TITAN
+
+- url: "https://keskustelu.kauppalehti.fi/threads/investors-house-porssin-halvin-yhtio-on-loytynyt.240804/"
+  forum: Kauppalehti
+  company: Investors House
+  ticker: INVEST
+
+- url: "https://keskustelu.kauppalehti.fi/threads/martela.221139/"
+  forum: Kauppalehti
+  company: Martela
+  ticker: MARAS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/spinnova-tulevaa-kasvua.248052/"
+  forum: Kauppalehti
+  company: Spinnova
+  ticker: SPINN
+
+- url: "https://keskustelu.kauppalehti.fi/threads/puuilo-morjensta-poytaan-ja-porssiin.248049/"
+  forum: Kauppalehti
+  company: Puuilo
+  ticker: PUUILO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/siili.215094/"
+  forum: Kauppalehti
+  company: Siili Solutions
+  ticker: SIILI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/kone.220605/"
+  forum: Kauppalehti
+  company: Kone
+  ticker: KNEBV
+
+- url: "https://keskustelu.kauppalehti.fi/threads/talenom.243347/"
+  forum: Kauppalehti
+  company: Talenom
+  ticker: TNOM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/srv-oyj.240043/"
+  forum: Kauppalehti
+  company: SRV Group
+  ticker: SRV1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/anora.248146/"
+  forum: Kauppalehti
+  company: Anora Group
+  ticker: ANORA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/withsecure-oyj.248398/"
+  forum: Kauppalehti
+  company: WithSecure Corporation
+  ticker: WITH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/orthex.247899/"
+  forum: Kauppalehti
+  company: Orthex
+  ticker: ORTHEX
+
+- url: "https://keskustelu.kauppalehti.fi/threads/sanoma-kaanneyhtioiden-kuningatar.243731/"
+  forum: Kauppalehti
+  company: Sanoma
+  ticker: SANOMA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/fiskars.213857/"
+  forum: Kauppalehti
+  company: Fiskars
+  ticker: FSKRS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/pohjanmaan-arvo-sijoitusosuuskunta-arvosk.248814/"
+  forum: Kauppalehti
+  company: Arvo Sijoitusosuuskunta
+  ticker: ARVOSK
+
+- url: "https://keskustelu.kauppalehti.fi/threads/loihde.249213/"
+  forum: Kauppalehti
+  company: Loihde
+  ticker: LOIHDE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/digitalist-group.248014/"
+  forum: Kauppalehti
+  company: Digitalist
+  ticker: DIGIGR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/etteplan.227840/"
+  forum: Kauppalehti
+  company: Etteplan
+  ticker: ETTE
+
+- url: "https://keskustelu.kauppalehti.fi/threads/netum.248032/"
+  forum: Kauppalehti
+  company: Netum
+  ticker: NETUM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/trainers-house.246081/"
+  forum: Kauppalehti
+  company: Trainers House
+  ticker: TRH1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/consti.244472/"
+  forum: Kauppalehti
+  company: Consti
+  ticker: CONSTI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/lamor-ymparistoratkaisuiden-tuotteet-ja-palvelut.248241/"
+  forum: Kauppalehti
+  company: Lamor
+  ticker: LAMOR
+
+- url: "https://keskustelu.kauppalehti.fi/threads/apetit-oyj.216340/"
+  forum: Kauppalehti
+  company: Apetit
+  ticker: APETIT
+
+- url: "https://keskustelu.kauppalehti.fi/threads/toivo-group-uusi-listautuja.248016/"
+  forum: Kauppalehti
+  company: Toivo Group
+  ticker: TOIVO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nokian-panimo-kasvua-tuoppi-kerrallaan.249302/"
+  forum: Kauppalehti
+  company: Nokian Panimo
+  ticker: BEER
+
+- url: "https://keskustelu.kauppalehti.fi/threads/tallink.126163/"
+  forum: Kauppalehti
+  company: Tallink Grupp
+  ticker: TALLINK
+
+- url: "https://keskustelu.kauppalehti.fi/threads/pihlajalinna-listautuu.239732/"
+  forum: Kauppalehti
+  company: Pihlajalinna
+  ticker: PIHLIS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/fodelia-oyj-uusi-mahdollisuus-sijoittaa-ruokaan.247057/"
+  forum: Kauppalehti
+  company: Fodelia
+  ticker: FODELIA
+
+- url: "https://keskustelu.kauppalehti.fi/threads/vaisala.212199/"
+  forum: Kauppalehti
+  company: Vaisala
+  ticker: VAIAS
+
+- url: "https://keskustelu.kauppalehti.fi/threads/musti-group-musti-mirri-listautuu.247168/"
+  forum: Kauppalehti
+  company: Musti Group
+  ticker: MUSTI
+
+- url: "https://keskustelu.kauppalehti.fi/threads/nurminen-logistics.213268/"
+  forum: Kauppalehti
+  company: Nurminen Logistics
+  ticker: NLG1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/suominen-2021-2022.248091/"
+  forum: Kauppalehti
+  company: Suominen
+  ticker: SUY1V
+
+- url: "https://keskustelu.kauppalehti.fi/threads/vincit-first-northiin.243577/"
+  forum: Kauppalehti
+  company: Vincit
+  ticker: VINCIT
+
+- url: "https://keskustelu.kauppalehti.fi/threads/norrhydro.248202/"
+  forum: Kauppalehti
+  company: Norrhydro Group
+  ticker: NORRH
+
+- url: "https://keskustelu.kauppalehti.fi/threads/uusi-tuuli-puhaltaa-boreo-oyj.247819/"
+  forum: Kauppalehti
+  company: Boreo
+  ticker: BOREO
+
+- url: "https://keskustelu.kauppalehti.fi/threads/admicom.245622/"
+  forum: Kauppalehti
+  company: Admicom
+  ticker: ADMCM
+
+- url: "https://keskustelu.kauppalehti.fi/threads/aallon-group.246693/"
+  forum: Kauppalehti
+  company: Aallon Group
+  ticker: AALLON
