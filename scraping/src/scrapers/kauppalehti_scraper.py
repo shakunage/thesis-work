@@ -81,18 +81,24 @@ def kauppalehti_scraper(thread_url, company_name, ticker):
                             post = posts.nth(i)
                             reactions_locator = post.locator("div.reactionsBar.js-reactionsList.is-active")
                             
-                            # Extract data with None checks
-                            data_content = post.get_attribute('data-content')
-                            user_id = post.locator('h4.message-name > a').get_attribute('data-user-id')
-                            message_href = post.locator('.message-attribution-gadget').get_attribute('href')
+                            # Extract data with None checks and shorter timeout (5s instead of 30s default)
+                            data_content = post.get_attribute('data-content', timeout=5000) or "Unknown"
+                            
+                            # User ID with fallback
+                            user_id_locator = post.locator('h4.message-name > a')
+                            user_id = user_id_locator.get_attribute('data-user-id', timeout=5000) if user_id_locator.count() > 0 else "Unknown"
+                            
+                            # Message href with fallback
+                            message_href_locator = post.locator('.message-attribution-gadget')
+                            message_href = message_href_locator.get_attribute('href', timeout=5000) if message_href_locator.count() > 0 else None
                             
                             # Get datetime - if multiple time elements, take the last one
                             time_locator = post.locator("time")
-                            datetime_attr = time_locator.last.get_attribute("datetime") if time_locator.count() > 0 else None
+                            datetime_attr = time_locator.last.get_attribute("datetime", timeout=5000) if time_locator.count() > 0 else None
                             
-                            # Skip post if critical data is missing
-                            if not all([data_content, user_id, message_href, datetime_attr]):
-                                logger.warning(f"Skipping post {i+1} on page {page_count}: missing critical data")
+                            # Skip post if critical data is missing (message_href and datetime are critical)
+                            if not message_href or not datetime_attr:
+                                logger.warning(f"Skipping post {i+1} on page {page_count}: missing critical data (href or datetime)")
                                 continue
                             
                             post_data = {

@@ -2,21 +2,31 @@ import json
 import logging
 import random
 import time
+from datetime import datetime
 from pathlib import Path
 import yaml
 from scrapers.kauppalehti_scraper import kauppalehti_scraper
+
+# Create logs directory and setup logging
+logs_dir = Path(__file__).parent.parent / "logs"
+logs_dir.mkdir(exist_ok=True)
+
+# Create log filename with current datetime
+log_filename = f"logs_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+log_filepath = logs_dir / log_filename
 
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('scraping.log'),
+        logging.FileHandler(log_filepath, encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
 
 logger = logging.getLogger(__name__)
+logger.info(f"Logging to {log_filepath}")
 
 def main():
     logger.info("Starting scraping process")
