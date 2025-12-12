@@ -1,0 +1,465 @@
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/citycon"
+  forum: Sijoitustieto
+  company: Citycon
+  ticker: CTY1S
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/valmet"
+  forum: Sijoitustieto
+  company: Valmet
+  ticker: VALMT
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nordea"
+  forum: Sijoitustieto
+  company: Nordea
+  ticker: NDA-FI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/puuilo"
+  forum: Sijoitustieto
+  company: Puuilo
+  ticker: PUUILO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/puuilo"
+  forum: Sijoitustieto
+  company: Neste
+  ticker: NESTE
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/gofore"
+  forum: Sijoitustieto
+  company: Gofore
+  ticker: GOFORE
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/tekova"
+  forum: Sijoitustieto
+  company: Tekova
+  ticker: TEKOVA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/huhtamaki"
+  forum: Sijoitustieto
+  company: Huhtamäki
+  ticker: HUH1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/wulff-group"
+  forum: Sijoitustieto
+  company: Wulff
+  ticker: WUF1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/incap"
+  forum: Sijoitustieto
+  company: Incap
+  ticker: ICP1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/ilkka"
+  forum: Sijoitustieto
+  company: Ilkka
+  ticker: ILKKA1
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kh-group-os-sievi-capital"
+  forum: Sijoitustieto
+  company: KH Group
+  ticker: KHG
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/oma-saastopankki"
+  forum: Sijoitustieto
+  company: Oma Säästöpankki
+  ticker: OMASP
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/tokmanni"
+  forum: Sijoitustieto
+  company: Tokmanni
+  ticker: TOKMAN
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/olvi"
+  forum: Sijoitustieto
+  company: Olvi
+  ticker: OLVAS
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/framery"
+  forum: Sijoitustieto
+  company: Framery
+  ticker: FRAMERY
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/ponsse"
+  forum: Sijoitustieto
+  company: Ponsse
+  ticker: PON1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kojamo"
+  forum: Sijoitustieto
+  company: Kojamo
+  ticker: KOJAMO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/koskisen"
+  forum: Sijoitustieto
+  company: Koskisen
+  ticker: KOSKI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/digia"
+  forum: Sijoitustieto
+  company: Digia
+  ticker: DIGIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/trainers-house"
+  forum: Sijoitustieto
+  company: Trainers' House
+  ticker: TRH1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/raute"
+  forum: Sijoitustieto
+  company: Raute
+  ticker: RAUTE
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/outokumpu"
+  forum: Sijoitustieto
+  company: Outokumpu
+  ticker: OUT1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/fortum"
+  forum: Sijoitustieto
+  company: Fortum
+  ticker: FORTUM
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/metso"
+  forum: Sijoitustieto
+  company: Metso
+  ticker: METSO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/robit"
+  forum: Sijoitustieto
+  company: Robit
+  ticker: ROBIT
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/posti"
+  forum: Sijoitustieto
+  company: Posti Group
+  ticker: POSTI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/vaisala"
+  forum: Sijoitustieto
+  company: Vaisala
+  ticker: VAIAS
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/alandsbanken"
+  forum: Sijoitustieto
+  company: Ålandsbanken
+  ticker: ALBBV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kesko"
+  forum: Sijoitustieto
+  company: Kesko
+  ticker: KESKOB
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/exel-composites"
+  forum: Sijoitustieto
+  company: Exel Composites
+  ticker: EXL1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/marimekko"
+  forum: Sijoitustieto
+  company: Marimekko
+  ticker: MEKKO 
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nokia"
+  forum: Sijoitustieto
+  company: Nokia
+  ticker: NOKIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/summa-defence-entiset-meriaura-group-oyj-savosolar"
+  forum: Sijoitustieto
+  company: Summa Defence
+  ticker: SUMMA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/tulikivi-0"
+  forum: Sijoitustieto
+  company: Tulikivi
+  ticker: TULAV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/harvia"
+  forum: Sijoitustieto
+  company: Harvia
+  ticker: HARVIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/investors-house"
+  forum: Sijoitustieto
+  company: Investors House
+  ticker: INVEST
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/dovre"
+  forum: Sijoitustieto
+  company: Dovre
+  ticker: DOVRE
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/sampo"
+  forum: Sijoitustieto
+  company: Sampo
+  ticker: SAMPO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kamux"
+  forum: Sijoitustieto
+  company: Kamux
+  ticker: KAMUX
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/witted-megacorp"
+  forum: Sijoitustieto
+  company: Witted Megacorp
+  ticker: WITTED
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/elisa"
+  forum: Sijoitustieto
+  company: Elisa
+  ticker: ELISA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/admicom"
+  forum: Sijoitustieto
+  company: Admicom
+  ticker: ADMCM
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nokian-panimo"
+  forum: Sijoitustieto
+  company: Nokian Panimo
+  ticker: BEER
+  
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/ovaro-os-orava"
+  forum: Sijoitustieto
+  company: Ovaro Kiinteistösijoitus
+  ticker: OVARO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/rapala-vmc-oyj"
+  forum: Sijoitustieto
+  company: Rapala
+  ticker: RAP1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/stora-enso"
+  forum: Sijoitustieto
+  company: Stora Enso
+  ticker: STERV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/boreo-ex-yleiselektroniikka"
+  forum: Sijoitustieto
+  company: Boreo
+  ticker: BOREO
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/alma-media"
+  forum: Sijoitustieto
+  company: Alma Media
+  ticker: ALMA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/sanoma"
+  forum: Sijoitustieto
+  company: Sanoma
+  ticker: SANOMA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/yit"
+  forum: Sijoitustieto
+  company: YIT
+  ticker: YIT
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/wartsila"
+  forum: Sijoitustieto
+  company: Wärtsilä
+  ticker: WRT1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/evli-pankki-oyj"
+  forum: Sijoitustieto
+  company: Evli
+  ticker: EVLI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/konecranes"
+  forum: Sijoitustieto
+  company: Konecranes
+  ticker: KCR
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/consti"
+  forum: Sijoitustieto
+  company: Consti
+  ticker: CONSTI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/pihlajalinna"
+  forum: Sijoitustieto
+  company: Pihlajalinna
+  ticker: PIHLIS
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/atria-oyj"
+  forum: Sijoitustieto
+  company: Atria
+  ticker: ATRAV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/solteq"
+  forum: Sijoitustieto
+  company: Solteq
+  ticker: SOLTEQ
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/siili-solutions"
+  forum: Sijoitustieto
+  company: Siili Solutions
+  ticker: SIILI
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kone"
+  forum: Sijoitustieto
+  company: Kone
+  ticker: KNEBV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/titanium"
+  forum: Sijoitustieto
+  company: Titanium
+  ticker: TITAN
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/fiskars"
+  forum: Sijoitustieto
+  company: Fiskars
+  ticker: FSKRS
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/fodelia"
+  forum: Sijoitustieto
+  company: Fodelia
+  ticker: FODELIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/saga-furs-oyj"
+  forum: Sijoitustieto
+  company: Saga Furs
+  ticker: SAGCV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/metsa-board"
+  forum: Sijoitustieto
+  company: Metsä Board
+  ticker: METSB
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/qt-group"
+  forum: Sijoitustieto
+  company: Qt Group
+  ticker: QTCOM
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/suominen"
+  forum: Sijoitustieto
+  company: Suominen
+  ticker: SUY1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/lemonsoft"
+  forum: Sijoitustieto
+  company: Lemonsoft
+  ticker: LEMON
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/revenio-group"
+  forum: Sijoitustieto
+  company: Revenio
+  ticker: REG1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/fondia"
+  forum: Sijoitustieto
+  company: Fondia
+  ticker: FONDIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/vincit-group-oyj"
+  forum: Sijoitustieto
+  company: Vincit
+  ticker: VINCIT
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kempower"
+  forum: Sijoitustieto
+  company: Kempower
+  ticker: KEMPOWR
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/ssab"
+  forum: Sijoitustieto
+  company: SSAB
+  ticker: SSABBH
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/mandatum"
+  forum: Sijoitustieto
+  company: Mandatum
+  ticker: MANTA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/finnair"
+  forum: Sijoitustieto
+  company: Finnair
+  ticker: FIA1S
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/capman"
+  forum: Sijoitustieto
+  company: Capman
+  ticker: CAPMAN
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nurminen-logistics"
+  forum: Sijoitustieto
+  company: Nurminen Logistics
+  ticker: NLG1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/aallon-group"
+  forum: Sijoitustieto
+  company: Aallon Group
+  ticker: AALLON
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/orion"
+  forum: Sijoitustieto
+  company: Orion
+  ticker: ORNBV
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/upm-kymmene"
+  forum: Sijoitustieto
+  company: UPM-Kymmene
+  ticker: UPM
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/scanfil"
+  forum: Sijoitustieto
+  company: Scanfil
+  ticker: 
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/scanfil"
+  forum: Sijoitustieto
+  company: SCANFL
+  ticker: SCANFL
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/glaston"
+  forum: Sijoitustieto
+  company: Glaston
+  ticker: GLA1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kemira"
+  forum: Sijoitustieto
+  company: Kemira
+  ticker: KEMIRA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/canatu-hiilinanoputkia-tulevaisuuden-teknologialle"
+  forum: Sijoitustieto
+  company: Canatu
+  ticker: CANATU
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/kreate-vaativan-infran-erikoisosaaja-listautumisanti"
+  forum: Sijoitustieto
+  company: Kreate
+  ticker: KREATE
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/cityvarasto-0"
+  forum: Sijoitustieto
+  company: Cityvarasto
+  ticker: CVRS1
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nexstim"
+  forum: Sijoitustieto
+  company: Nexstim
+  ticker: NXTMH
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/aktia"
+  forum: Sijoitustieto
+  company: Aktia Pankki
+  ticker: AKTIA
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/lassilatikanoja"
+  forum: Sijoitustieto
+  company: Lassila & Tikanoja
+  ticker: LAT1V
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/spinnova"
+  forum: Sijoitustieto
+  company: Spinnova
+  ticker: SPINN
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/nokian-renkaat"
+  forum: Sijoitustieto
+  company: Nokian Renkaat
+  ticker: TYRES
+
+- url: "https://www.sijoitustieto.fi/sijoituskeskustelu/osakkeet/remedy-entertainment"
+  forum: Sijoitustieto
+  company: Remedy Entertainment
+  ticker: REMEDY
+
