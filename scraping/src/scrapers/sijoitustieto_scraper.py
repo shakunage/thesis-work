@@ -9,8 +9,8 @@ from models.post import Post
 
 logger = logging.getLogger(__name__)
 
-MAX_RETRIES = 3
-INITIAL_RETRY_DELAY = 10  # seconds
+MAX_RETRIES = 10
+INITIAL_RETRY_DELAY = 5  # seconds
 
 def sijoitustieto_scraper(thread_url, company_name, ticker):
     """
