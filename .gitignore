@@ -213,4 +213,4 @@ __marimo__/
 data/models/
 
 # data folder
-scraping/data/
+scraping/output_data/
