@@ -545,8 +545,8 @@
 
 - url: "https://keskustelu.kauppalehti.fi/threads/scanfil-vahva-vedatys.230226/"
   forum: Kauppalehti
-  company: SCANFL
-  ticker: Scanfil
+  company: Scanfil
+  ticker: SCANFL
 
 - url: "https://keskustelu.kauppalehti.fi/threads/telia.242679/"
   forum: Kauppalehti

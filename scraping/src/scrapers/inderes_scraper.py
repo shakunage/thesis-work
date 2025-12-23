@@ -1,19 +1,20 @@
 import json
 import logging
-import random
 import time
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 from models.post import Post
 
 logger = logging.getLogger(__name__)
 
-MAX_RETRIES = 10
+MAX_RETRIES = 5
 INITIAL_RETRY_DELAY = 5  # seconds
 
 def inderes_scraper(thread_url, company_name, ticker):
     """
-    Scrape posts from a Inderes forum thread.
+    Scrape posts from an Inderes forum thread (with infinite scrolling).
     
     Args:
         thread_url: URL of the forum thread
@@ -25,21 +26,23 @@ def inderes_scraper(thread_url, company_name, ticker):
     """
     logger.info(f"Starting scraper for {company_name} at {thread_url}")
     data = []
+    scraped_post_ids = set()  # Track scraped post IDs to avoid duplicates
     
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page(
-                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+                user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                locale="fi-FI"
             )
-            page_count = 0
 
             try:
                 # Go to the forum's listing page with retry logic
                 retry_count = 0
                 while retry_count < MAX_RETRIES:
                     try:
-                        page.goto(thread_url, wait_until="networkidle", timeout=60000)
+                        page.goto(thread_url, wait_until="domcontentloaded", timeout=60000)
+                        time.sleep(4)  # Fixed wait for page to load (site polls constantly)
                         
                         # Check if we got rate limited or blocked
                         if page.locator("text=/rate limit|blocked|access denied/i").count() > 0:
@@ -66,107 +69,155 @@ def inderes_scraper(thread_url, company_name, ticker):
                 browser.close()
                 return []
 
-            while True:
-                page_count += 1
-                logger.debug(f"Scraping page {page_count}")
-                
-                try:
-                    # Adjust selectors to match the forum's HTML structure
-                    posts = page.locator(".message.message--post.js-post.js-inlineModContainer")
-                    post_count = posts.count()
-                    logger.debug(f"Found {post_count} posts on page {page_count}")
+            # Tab-based navigation scraping logic
+            post_count = 0
+            consecutive_failures = 0
+            max_consecutive_failures = 5
 
-                    for i in range(post_count):
-                        try:
-                            post = posts.nth(i)
-                            reactions_locator = post.locator("div.reactionsBar.js-reactionsList.is-active")
-                            
-                            # Extract data with None checks and shorter timeout (5s instead of 30s default)
-                            data_content = post.get_attribute('data-content', timeout=5000) or "Unknown"
-                            
-                            # User ID with fallback
-                            user_id_locator = post.locator('h4.message-name > a')
-                            user_id = user_id_locator.get_attribute('data-user-id', timeout=5000) if user_id_locator.count() > 0 else "Unknown"
-                            
-                            # Message href with fallback
-                            message_href_locator = post.locator('.message-attribution-gadget')
-                            message_href = message_href_locator.get_attribute('href', timeout=5000) if message_href_locator.count() > 0 else None
-                            
-                            # Get datetime - if multiple time elements, take the last one
-                            time_locator = post.locator("time")
-                            datetime_attr = time_locator.last.get_attribute("datetime", timeout=5000) if time_locator.count() > 0 else None
-                            
-                            # Skip post if critical data is missing (message_href and datetime are critical)
-                            if not message_href or not datetime_attr:
-                                logger.warning(f"Skipping post {i+1} on page {page_count}: missing critical data (href or datetime)")
-                                continue
-                            
-                            post_data = {
-                                "id": f"Kauppalehti.{data_content}",
-                                "author_id": f"Kauppalehti.{user_id}",
-                                "message": post.locator(".bbWrapper").inner_text(),
-                                "date_time": datetime_attr,
-                                "engagement": reactions_locator.inner_text() if reactions_locator.count() > 0 else "N/A",
-                                "company_name": company_name,
-                                "ticker": ticker,
-                                "forum": "Kauppalehti",
-                                "url": f"https://keskustelu.kauppalehti.fi{message_href}",
-                            }
-                            data.append(Post(**post_data))
-                        except Exception as e:
-                            logger.warning(f"Error scraping post {i+1} on page {page_count}: {e}")
-                            continue
-                    
-                    # Check if next page button exists
-                    next_button = page.locator("a.pageNav-jump.pageNav-jump--next").last
-                    if next_button.count() == 0:
-                        logger.debug("No more pages to scrape")
-                        break
-                    
-                    # Wait for a random time between 2.5s and 4.5s (more conservative)
-                    wait_time = random.uniform(2.5, 4.5)
-                    logger.debug(f"Waiting {wait_time:.1f}s before next page")
-                    time.sleep(wait_time)
-                    
-                    # Get the href and navigate to it directly
-                    next_url = next_button.get_attribute("href")
-                    if not next_url:
-                        logger.debug("Next button has no href, stopping")
-                        break
-                    
-                    # Navigate to the next page with retry logic
-                    full_next_url = f"https://keskustelu.kauppalehti.fi{next_url}"
-                    logger.debug(f"Navigating to next page: {full_next_url}")
-                    
-                    retry_count = 0
-                    while retry_count < MAX_RETRIES:
-                        try:
-                            page.goto(full_next_url, wait_until="networkidle", timeout=60000)
-                            
-                            # Check if we got rate limited
-                            if page.locator("text=/rate limit|blocked|access denied/i").count() > 0:
-                                retry_delay = INITIAL_RETRY_DELAY * (2 ** retry_count)
-                                logger.warning(f"Rate limiting detected on page {page_count}. Waiting {retry_delay}s")
-                                time.sleep(retry_delay)
-                                retry_count += 1
-                                continue
-                            break
-                        except PlaywrightTimeoutError:
-                            retry_count += 1
-                            if retry_count >= MAX_RETRIES:
-                                logger.error(f"Timeout navigating to page after {MAX_RETRIES} retries, stopping pagination")
-                                raise
-                            retry_delay = INITIAL_RETRY_DELAY * (2 ** (retry_count - 1))
-                            logger.warning(f"Timeout on page navigation attempt {retry_count}/{MAX_RETRIES}. Retrying in {retry_delay}s")
-                            time.sleep(retry_delay)
-                    
-                except PlaywrightTimeoutError:
-                    logger.error(f"Timeout on page {page_count}, stopping pagination")
-                    break
-                except Exception as e:
-                    logger.error(f"Error on page {page_count}: {e}")
-                    break
+            # Wait for first post to load
+            try:
+                page.locator('.boxed.onscreen-post').first.wait_for(state="visible", timeout=5000)
+            except PlaywrightTimeoutError:
+                logger.error("No posts found on initial load")
+                browser.close()
+                return []
             
+            logger.info("Starting tab-based navigation scraping")
+            logger.info(f"Total posts in thread: {int(page.locator('.timeline-replies').inner_text().split()[-1])}")
+            logger.info(f"Estimated scraping time for the thread {(int(page.locator('.timeline-replies').inner_text().split()[-1]) / 22.5):.2f} min")
+    
+            
+            while consecutive_failures < max_consecutive_failures:
+                try:
+                    
+                    # Check if a share button is focused
+                    is_share_focused = page.evaluate("""
+                        document.activeElement && 
+                        document.activeElement.tagName === 'BUTTON' && 
+                        document.activeElement.classList.contains('share')
+                    """)
+                    
+                    if is_share_focused:
+                        # Scroll the share button to top of viewport
+                        page.evaluate("""
+                            if (document.activeElement) {
+                                document.activeElement.scrollIntoView({ 
+                                    behavior: 'instant', 
+                                    block: 'start' 
+                                });
+                            }
+                        """)
+                        time.sleep(0.3)  # Brief wait for scroll to complete
+                    
+                    # Check if a relative-date span is focused
+                    is_date_focused = page.evaluate("""
+                        document.activeElement && 
+                        document.activeElement.tagName === 'A' && 
+                        document.activeElement.classList.contains('post-date')
+                    """)
+                    
+                    if is_date_focused:
+                        # We're on a date element, scrape the parent post
+                        try:
+                            # Scroll the focused element to the top of the viewport
+                            page.evaluate("""
+                                if (document.activeElement) {
+                                    document.activeElement.scrollIntoView({ 
+                                        behavior: 'instant', 
+                                        block: 'start' 
+                                    });
+                                }
+                            """)
+                            time.sleep(0.3)  # Brief wait for scroll to complete
+                            
+                            # Find the parent post container
+                            date_element = page.locator(':focus')
+                            post = date_element.locator('xpath=ancestor::article[contains(@class, "boxed")]').first
+                            
+                            # Get post global ID to avoid duplicates
+                            post_id = post.get_attribute('data-post-id', timeout=2000)
+
+                            # Extract post number
+                            post_number_in_thread = int(post.get_attribute('id', timeout=2000)[5:])
+
+                            if int(post_number_in_thread) == int(page.locator('.timeline-replies').inner_text().split()[-1]):
+                                logger.info(f"All messages scraped. Finishing scrape.")
+                                break
+                            
+                            if post_id and post_id not in scraped_post_ids:
+                                scraped_post_ids.add(post_id)
+                                post_count += 1
+                                                                
+                                # Extract user ID
+                                user_id = post.get_attribute('data-user-id')
+                                
+                                # Extract post content
+                                content_locator = post.locator('.cooked')
+                                message_text = content_locator.inner_text(timeout=2000) if content_locator.count() > 0 else ""
+                                
+                                # Extract datetime from the focused date element
+                                datetime_str = post.locator('.relative-date').get_attribute('data-time', timeout=2000)
+                                
+                                # Parse datetime from Unix timestamp and convert to Finnish time
+                                datetime_attr = None
+                                if datetime_str:
+                                    try:
+                                        timestamp_ms = int(datetime_str)
+                                        datetime_attr = datetime.fromtimestamp(timestamp_ms / 1000, tz=ZoneInfo("Europe/Helsinki"))
+                                    except Exception as e:
+                                        logger.debug(f"Failed to parse Unix timestamp {datetime_str}: {e}")
+                                
+                                # Skip if missing critical data
+                                if not datetime_attr or not message_text:
+                                    logger.warning(f"Skipping post {post_id}: missing critical data")
+                                    logger.info(f"Post content: '{message_text}', datetime: '{datetime_attr}'")
+                                else:
+                                    # Get post URL
+                                    post_url = f"{thread_url}/{post_number_in_thread}" if post_number_in_thread else thread_url
+                                    
+                                    # Extract likes/engagement
+                                    likes = "0"
+                                    try:
+                                        likes_locator = post.locator('button.like-count')
+                                        if likes_locator.count() > 0:
+                                            likes = likes_locator.get_attribute('label', timeout=1000).split()[0]  or "0"
+                                    except:
+                                        pass
+
+                                    post_data = {
+                                        "id": f"Inderes.{post_id}",
+                                        "author_id": f"Inderes.{user_id}",
+                                        "message": message_text,
+                                        "date_time": datetime_attr,
+                                        "engagement": likes,
+                                        "company_name": company_name,
+                                        "ticker": ticker,
+                                        "forum": "Inderes",
+                                        "url": post_url,
+                                    }
+                                    data.append(Post(**post_data))
+                                    consecutive_failures = 0  # Reset on success
+                                    time.sleep(1.5)  # Small delay to be polite
+                            
+                        except Exception as e:
+                            logger.warning(f"Error scraping focused post: {e}")
+                            consecutive_failures += 1
+                    
+                    # Press Tab to move to next element
+                    page.keyboard.press('Tab')
+                    time.sleep(0.05)  # Small delay for focus to change
+                    
+                except Exception as e:
+                    logger.error(f"Error during tab navigation: {e}")
+                    consecutive_failures += 1
+                    # Try to continue
+                    try:
+                        page.keyboard.press('Tab')
+                        time.sleep(0.05)
+                    except:
+                        break
+            
+            logger.info(f"Tab navigation completed. Scraped {post_count} posts total")
             browser.close()
             
     except Exception as e:
@@ -175,7 +226,7 @@ def inderes_scraper(thread_url, company_name, ticker):
     
     # Convert Pydantic models to a list of dictionaries for JSON serialization
     output_data = [post.model_dump(mode="json") for post in data]
-    logger.info(f"Scraper completed. Collected {len(output_data)} posts from {page_count} pages")
+    logger.info(f"Scraper completed. Collected {len(output_data)} posts via tab navigation")
     
     # Save to individual JSON file by forum and company (save progress even if incomplete)
     output_dir = Path(__file__).parent.parent.parent / "output_data"
@@ -184,7 +235,7 @@ def inderes_scraper(thread_url, company_name, ticker):
     # Create safe filename from company name (remove special characters)
     safe_company_name = "".join(c if c.isalnum() or c in (' ', '-', '_') else '_' for c in company_name)
     safe_company_name = safe_company_name.replace(' ', '_').lower()
-    output_file = output_dir / f"kauppalehti_{safe_company_name}.json"
+    output_file = output_dir / f"inderes_{safe_company_name}.json"
     
     # Save even if we only got partial data
     if len(output_data) > 0:
