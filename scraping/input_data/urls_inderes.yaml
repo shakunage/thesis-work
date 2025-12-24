@@ -1,23 +1,23 @@
-- url: "https://forum.inderes.com/t/elisa-5g-n-vanavedessa/8108"
-  forum: Inderes
-  company: Elisa
-  ticker: ELISA
+# - url: "https://forum.inderes.com/t/elisa-5g-n-vanavedessa/8108"
+#   forum: Inderes
+#   company: Elisa
+#   ticker: ELISA
 
-- url: "https://forum.inderes.com/t/martela-tyo-ja-oppimisymparistojen-kehittamisen-kumppani/15267"
-  forum: Inderes
-  company: Martela
-  ticker: MARAS
+# - url: "https://forum.inderes.com/t/martela-tyo-ja-oppimisymparistojen-kehittamisen-kumppani/15267"
+#   forum: Inderes
+#   company: Martela
+#   ticker: MARAS
 
-- url: "https://forum.inderes.com/t/wulff-yhtiot-oyj/5595"
-  forum: Inderes
-  company: Wulff
-  ticker: WUF1V
+# - url: "https://forum.inderes.com/t/wulff-yhtiot-oyj/5595"
+#   forum: Inderes
+#   company: Wulff
+#   ticker: WUF1V
 
-- url: "https://forum.inderes.com/t/biohit-kasvutoimet-purevat/3323"
-  forum: Inderes
-  company: Biohit
-  ticker: BIOBV
-
+# - url: "https://forum.inderes.com/t/biohit-kasvutoimet-purevat/3323"
+#   forum: Inderes
+#   company: Biohit
+#   ticker: BIOBV
+# ^scraped already
 - url: "https://forum.inderes.com/t/fortum-puhtaan-energiasiirtyman-vauhdittaja/886"
   forum: Inderes
   company: Fortum

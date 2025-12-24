@@ -1,6 +1,7 @@
 import json
 import logging
 import time
+import random
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -197,7 +198,8 @@ def inderes_scraper(thread_url, company_name, ticker):
                                     }
                                     data.append(Post(**post_data))
                                     consecutive_failures = 0  # Reset on success
-                                    time.sleep(1.5)  # Small delay to be polite
+                                    wait_time = random.uniform(1.0, 2.0)
+                                    time.sleep(wait_time)  # Small delay to be polite
                             
                         except Exception as e:
                             logger.warning(f"Error scraping focused post: {e}")
