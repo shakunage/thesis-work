@@ -17,111 +17,111 @@
 #   forum: Inderes
 #   company: Biohit
 #   ticker: BIOBV
-# ^scraped already
-# - url: "https://forum.inderes.com/t/fortum-puhtaan-energiasiirtyman-vauhdittaja/886"
+
+- url: "https://forum.inderes.com/t/fortum-puhtaan-energiasiirtyman-vauhdittaja/886"
+  forum: Inderes
+  company: Fortum
+  ticker: FORTUM
+
+# - url: "https://forum.inderes.com/t/boreo-teollinen-omistaja-ja-sarjayhdistelija/1327"
 #   forum: Inderes
-#   company: Fortum
-#   ticker: FORTUM
-# 
-- url: "https://forum.inderes.com/t/boreo-teollinen-omistaja-ja-sarjayhdistelija/1327"
-  forum: Inderes
-  company: Boreo
-  ticker: BOREO 
+#   company: Boreo
+#   ticker: BOREO 
 
-- url: "https://forum.inderes.com/t/exel-composites/955"
-  forum: Inderes
-  company: Exel Composites
-  ticker: EXL1V
+# - url: "https://forum.inderes.com/t/exel-composites/955"
+#   forum: Inderes
+#   company: Exel Composites
+#   ticker: EXL1V
 
-- url: "https://forum.inderes.com/t/revenio-sijoituskohteena/1256"
-  forum: Inderes
-  company: Revenio
-  ticker: REG1V
+# - url: "https://forum.inderes.com/t/revenio-sijoituskohteena/1256"
+#   forum: Inderes
+#   company: Revenio
+#   ticker: REG1V
 
-- url: "https://forum.inderes.com/t/solteq-sijoituskohteena/1420"
-  forum: Inderes
-  company: Solteq
-  ticker: SOLTEQ
+# - url: "https://forum.inderes.com/t/solteq-sijoituskohteena/1420"
+#   forum: Inderes
+#   company: Solteq
+#   ticker: SOLTEQ
 
-- url: "https://forum.inderes.com/t/hkfoods-sijoituskohteena/2433"
-  forum: Inderes
-  company: HKFoods
-  ticker: HKFOODS
+# - url: "https://forum.inderes.com/t/hkfoods-sijoituskohteena/2433"
+#   forum: Inderes
+#   company: HKFoods
+#   ticker: HKFOODS
 
-- url: "https://forum.inderes.com/t/kemira-globaali-kemianyhtio/3447"
-  forum: Inderes
-  company: Kemira
-  ticker: KEMIRA
+# - url: "https://forum.inderes.com/t/kemira-globaali-kemianyhtio/3447"
+#   forum: Inderes
+#   company: Kemira
+#   ticker: KEMIRA
 
-- url: "https://forum.inderes.com/t/terveystalo-terveemman-elaman-puolesta/298"
-  forum: Inderes
-  company: Terveystalo
-  ticker: TTALO
+# - url: "https://forum.inderes.com/t/terveystalo-terveemman-elaman-puolesta/298"
+#   forum: Inderes
+#   company: Terveystalo
+#   ticker: TTALO
 
-- url: "https://forum.inderes.com/t/sitowise-the-smart-city-company/15019"
-  forum: Inderes
-  company: Sitowise
-  ticker: SITOWS
+# - url: "https://forum.inderes.com/t/sitowise-the-smart-city-company/15019"
+#   forum: Inderes
+#   company: Sitowise
+#   ticker: SITOWS
 
-- url: "https://forum.inderes.com/t/kesko-kaupan-alan-osaaja/2209"
-  forum: Inderes
-  company: Kesko
-  ticker: KESKOB
+# - url: "https://forum.inderes.com/t/kesko-kaupan-alan-osaaja/2209"
+#   forum: Inderes
+#   company: Kesko
+#   ticker: KESKOB
 
-- url: "https://forum.inderes.com/t/fondia-se-erilainen-lakifirma/190"
-  forum: Inderes
-  company: Fondia
-  ticker: FONDIA
+# - url: "https://forum.inderes.com/t/fondia-se-erilainen-lakifirma/190"
+#   forum: Inderes
+#   company: Fondia
+#   ticker: FONDIA
 
-- url: "https://forum.inderes.com/t/kamux-kannattavuusparannusta-metsastamassa-osa-2/47396"
-  forum: Inderes
-  company: Kamux
-  ticker: KAMUX
+# - url: "https://forum.inderes.com/t/kamux-kannattavuusparannusta-metsastamassa-osa-2/47396"
+#   forum: Inderes
+#   company: Kamux
+#   ticker: KAMUX
 
-- url: "https://forum.inderes.com/t/solar-foods-oyj-globaalin-proteiinituotannon-uudistaja/53165"
-  forum: Inderes
-  company: Solar Foods
-  ticker: SFOODS
+# - url: "https://forum.inderes.com/t/solar-foods-oyj-globaalin-proteiinituotannon-uudistaja/53165"
+#   forum: Inderes
+#   company: Solar Foods
+#   ticker: SFOODS
 
-- url: "https://forum.inderes.com/t/dovre-group-lumitoita-ja-turskaa/3631"
-  forum: Inderes
-  company: Dovre
-  ticker: DOVRE
+# - url: "https://forum.inderes.com/t/dovre-group-lumitoita-ja-turskaa/3631"
+#   forum: Inderes
+#   company: Dovre
+#   ticker: DOVRE
 
-- url: "https://forum.inderes.com/t/orthex-muovia-maailmalle/15176"
-  forum: Inderes
-  company: Orthex
-  ticker: ORTHEX
+# - url: "https://forum.inderes.com/t/orthex-muovia-maailmalle/15176"
+#   forum: Inderes
+#   company: Orthex
+#   ticker: ORTHEX
 
-- url: "https://forum.inderes.com/t/lemonsoft-erp-solutions-for-smes/24781"
-  forum: Inderes
-  company: Lemonsoft
-  ticker: LEMON
+# - url: "https://forum.inderes.com/t/lemonsoft-erp-solutions-for-smes/24781"
+#   forum: Inderes
+#   company: Lemonsoft
+#   ticker: LEMON
 
-- url: "https://forum.inderes.com/t/posti-group-oyj-valtio-postin-tuo-meidan-jokaisen-luo/67588"
-  forum: Inderes
-  company: Posti Group
-  ticker: POSTI
+# - url: "https://forum.inderes.com/t/posti-group-oyj-valtio-postin-tuo-meidan-jokaisen-luo/67588"
+#   forum: Inderes
+#   company: Posti Group
+#   ticker: POSTI
 
-- url: "https://forum.inderes.com/t/titanium-kasvun-toista-tukijalkaa-etsimassa/257"
-  forum: Inderes
-  company: Titanium
-  ticker: TITAN
+# - url: "https://forum.inderes.com/t/titanium-kasvun-toista-tukijalkaa-etsimassa/257"
+#   forum: Inderes
+#   company: Titanium
+#   ticker: TITAN
 
-- url: "https://forum.inderes.com/t/siili-solutions-sijoituskohteena/1768"
-  forum: Inderes
-  company: Siili Solutions
-  ticker: SIILI
+# - url: "https://forum.inderes.com/t/siili-solutions-sijoituskohteena/1768"
+#   forum: Inderes
+#   company: Siili Solutions
+#   ticker: SIILI
 
-- url: "https://forum.inderes.com/t/aktia-konserni/3110"
-  forum: Inderes
-  company: Aktia Pankki
-  ticker: AKTIA
+# - url: "https://forum.inderes.com/t/aktia-konserni/3110"
+#   forum: Inderes
+#   company: Aktia Pankki
+#   ticker: AKTIA
 
-- url: "https://forum.inderes.com/t/honkarakenne-oyj/1763"
-  forum: Inderes
-  company: Honkarakenne
-  ticker: HONBS
+# - url: "https://forum.inderes.com/t/honkarakenne-oyj/1763"
+#   forum: Inderes
+#   company: Honkarakenne
+#   ticker: HONBS
 
 - url: "https://forum.inderes.com/t/kh-group-sievi-capital-muutosmatkalla/543"
   forum: Inderes
