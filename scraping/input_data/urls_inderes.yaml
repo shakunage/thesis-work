@@ -408,10 +408,11 @@
 #   company: Mandatum
 #   ticker: MANTA
 
-- url: "https://forum.inderes.com/t/incap-sijoituskohteena/926"
-  forum: Inderes
-  company: Incap
-  ticker: ICP1V
+# TODO: SCRAPE LATER!
+# - url: "https://forum.inderes.com/t/incap-sijoituskohteena/926"
+#   forum: Inderes
+#   company: Incap
+#   ticker: ICP1V
 
 - url: "https://forum.inderes.com/t/rapala-sijoituskohteena/201"
   forum: Inderes
