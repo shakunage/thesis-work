@@ -18,10 +18,10 @@
 #   company: Biohit
 #   ticker: BIOBV
 
-- url: "https://forum.inderes.com/t/fortum-puhtaan-energiasiirtyman-vauhdittaja/886"
-  forum: Inderes
-  company: Fortum
-  ticker: FORTUM
+# - url: "https://forum.inderes.com/t/fortum-puhtaan-energiasiirtyman-vauhdittaja/886"
+#   forum: Inderes
+#   company: Fortum
+#   ticker: FORTUM
 
 # - url: "https://forum.inderes.com/t/boreo-teollinen-omistaja-ja-sarjayhdistelija/1327"
 #   forum: Inderes
