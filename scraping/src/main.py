@@ -7,6 +7,7 @@ import yaml
 from scrapers.kauppalehti_scraper import kauppalehti_scraper
 from scrapers.sijoitustieto_scraper import sijoitustieto_scraper
 from scrapers.inderes_scraper import inderes_scraper
+from scrapers.yahoofinance_scraper import yahoofinance_scraper
 
 # Create logs directory and setup logging
 logs_dir = Path(__file__).parent.parent / "logs"
@@ -30,31 +31,36 @@ logger = logging.getLogger(__name__)
 logger.info(f"Logging to {log_filepath}")
 
 def main():
-    # Possible values for forum argument: kauppalehti, sijoitustieto, inderes
+    # Possible values for forum argument: kauppalehti, sijoitustieto, inderes, yahoofinance
     if len(sys.argv) < 2:
-        logger.error("Usage: python main.py <forum_name>")
-        logger.error("Available forums: kauppalehti, sijoitustieto, inderes")
+        logger.error("Usage: python main.py <scraper_name>")
+        logger.error("Available scrapers: kauppalehti, sijoitustieto, inderes, yahoofinance")
         sys.exit(1)
     
-    forum_name = sys.argv[1].lower()
+    scraper_name = sys.argv[1].lower()
     
-    # Map forum names to their scraper functions
+    # Map scraper names to their scraper functions
     scraper_map = {
         'kauppalehti': kauppalehti_scraper,
         'sijoitustieto': sijoitustieto_scraper,
-        'inderes': inderes_scraper
+        'inderes': inderes_scraper,
+        'yahoofinance': yahoofinance_scraper
     }
     
-    if forum_name not in scraper_map:
-        logger.error(f"Unknown forum: {forum_name}")
-        logger.error("Available forums: kauppalehti, sijoitustieto, inderes")
+    if scraper_name not in scraper_map:
+        logger.error(f"Unknown scraper: {scraper_name}")
+        logger.error("Available scrapers: kauppalehti, sijoitustieto, inderes, yahoofinance")
         sys.exit(1)
     
-    scraper_function = scraper_map[forum_name]
-    logger.info(f"Starting scraping process for forum: {forum_name}")
+    scraper_function = scraper_map[scraper_name]
+    logger.info(f"Starting scraping process for: {scraper_name}")
     
-    # Load URLs from YAML file
-    input_file = Path(__file__).parent.parent / "input_data" / f"urls_{forum_name}.yaml"
+    # Yahoo Finance scraper has different logic - it only needs tickers
+    if scraper_name == 'yahoofinance':
+        return run_yahoofinance_scraper()
+    
+    # Load URLs from YAML file for forum scrapers
+    input_file = Path(__file__).parent.parent / "input_data" / f"urls_{scraper_name}.yaml"
     output_dir = Path(__file__).parent.parent / "output_data"
     output_dir.mkdir(exist_ok=True)
     
@@ -108,6 +114,64 @@ def main():
             continue
     
     logger.info(f"Scraping complete. Total posts: {total_posts}, Successful threads: {successful_scrapes}, Failed threads: {failed_scrapes}")
+
+def run_yahoofinance_scraper():
+    """Run the Yahoo Finance scraper for all tickers in YAML files."""
+    input_dir = Path(__file__).parent.parent / "input_data"
+    output_dir = Path(__file__).parent.parent / "output_data"
+    output_dir.mkdir(exist_ok=True)
+    
+    # Collect all unique tickers from all YAML files
+    all_tickers = set()
+    
+    for yaml_file in input_dir.glob('urls_*.yaml'):
+        try:
+            with open(yaml_file, 'r', encoding='utf-8') as f:
+                urls_data = yaml.safe_load(f)
+            
+            for item in urls_data:
+                ticker = item.get('ticker')
+                if ticker:
+                    all_tickers.add(ticker)
+            
+            logger.info(f"Loaded tickers from {yaml_file.name}")
+        except Exception as e:
+            logger.error(f"Error loading {yaml_file}: {e}")
+            continue
+    
+    logger.info(f"Found {len(all_tickers)} unique tickers to scrape")
+    
+    successful_scrapes = 0
+    failed_scrapes = 0
+    total_rows = 0
+    
+    # Process each ticker
+    for idx, ticker in enumerate(sorted(all_tickers), 1):
+        logger.info(f"[{idx}/{len(all_tickers)}] Scraping Yahoo Finance data for {ticker}")
+        
+        try:
+            rows = yahoofinance_scraper(ticker)
+            if rows > 0:
+                total_rows += rows
+                successful_scrapes += 1
+                logger.info(f"Successfully scraped {rows} rows for {ticker}")
+            else:
+                failed_scrapes += 1
+                logger.warning(f"No data scraped for {ticker}")
+            
+            # Add delay between requests to be respectful
+            if idx < len(all_tickers):
+                import time
+                wait_time = random.uniform(2, 4)
+                logger.debug(f"Waiting {wait_time:.1f}s before next ticker")
+                time.sleep(wait_time)
+                
+        except Exception as e:
+            logger.error(f"Failed to scrape {ticker}: {e}", exc_info=True)
+            failed_scrapes += 1
+            continue
+    
+    logger.info(f"Yahoo Finance scraping complete. Total rows: {total_rows}, Successful: {successful_scrapes}, Failed: {failed_scrapes}")
 
 if __name__ == "__main__":
     main()
