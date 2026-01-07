@@ -139,6 +139,21 @@ def run_yahoofinance_scraper():
             logger.error(f"Error loading {yaml_file}: {e}")
             continue
     
+    all_tickers = set()
+    all_tickers.add("^OMXH25")
+    all_tickers.add("^OMXN40")
+    all_tickers.add("^STOXX50E")
+    all_tickers.add("^^GSPC")
+    all_tickers.add("^VIX")
+    all_tickers.add("^TNX")
+    all_tickers.add("CL=F")
+    all_tickers.add("GC=F")
+    all_tickers.add("EURUSD=X")
+    all_tickers.add("EURJPY=X")
+    all_tickers.add("EURSEK=X")
+    all_tickers.add("EURGBP=X")
+    all_tickers.add("EURCNY=X")
+    
     logger.info(f"Found {len(all_tickers)} unique tickers to scrape")
     
     successful_scrapes = 0

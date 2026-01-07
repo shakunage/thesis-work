@@ -24,10 +24,9 @@ def yahoofinance_scraper(ticker):
         int: Number of rows scraped
     """
     # Add .HE suffix for Helsinki exchange
-    yahoo_ticker = f"{ticker}.HE"
-    url = f"https://finance.yahoo.com/quote/{yahoo_ticker}/history/?period1={PERIOD1}&period2={PERIOD2}"
+    url = f"https://finance.yahoo.com/quote/{ticker}/history/?period1={PERIOD1}&period2={PERIOD2}"
     
-    logger.info(f"Starting Yahoo Finance scraper for {ticker} ({yahoo_ticker})")
+    logger.info(f"Starting Yahoo Finance scraper for {ticker} ({ticker})")
     
     # Setup output file path
     output_dir = Path(__file__).parent.parent.parent / "output_data"
@@ -85,7 +84,7 @@ def yahoofinance_scraper(ticker):
                 time.sleep(2)  # Additional wait for all rows to render
                 
             except PlaywrightTimeoutError:
-                logger.error(f"No data table found for {ticker} ({yahoo_ticker})")
+                logger.error(f"No data table found for {ticker} ({ticker})")
                 browser.close()
                 return 0
             
