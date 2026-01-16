@@ -214,3 +214,5 @@ data/models/
 
 # data folder
 scraping/output_data/
+*.pkl
+*.csv
