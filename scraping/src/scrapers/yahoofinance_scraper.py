@@ -27,6 +27,7 @@ def yahoofinance_scraper(ticker):
     url = f"https://finance.yahoo.com/quote/{ticker}/history/?period1={PERIOD1}&period2={PERIOD2}"
     
     logger.info(f"Starting Yahoo Finance scraper for {ticker} ({ticker})")
+    logger.info(f"URL: {url}")
     
     # Setup output file path
     output_dir = Path(__file__).parent.parent.parent / "output_data"
@@ -35,7 +36,7 @@ def yahoofinance_scraper(ticker):
     
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
+            browser = p.chromium.launch(headless=False)
             page = browser.new_page(
                 user_agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
                 locale="en-US"
@@ -80,11 +81,16 @@ def yahoofinance_scraper(ticker):
             try:
                 # Yahoo Finance uses a table with data-testid or specific class
                 # Try to find the table element
-                page.wait_for_selector('table', timeout=10000)
+                page.wait_for_selector('table', timeout=300)
                 time.sleep(2)  # Additional wait for all rows to render
+                logger.info(f"Table loaded for {ticker}")
                 
             except PlaywrightTimeoutError:
                 logger.error(f"No data table found for {ticker} ({ticker})")
+                # Take screenshot for debugging
+                screenshot_path = output_dir / f"debug_{ticker}_no_table.png"
+                page.screenshot(path=str(screenshot_path))
+                logger.error(f"Screenshot saved to {screenshot_path}")
                 browser.close()
                 return 0
             
@@ -95,17 +101,31 @@ def yahoofinance_scraper(ticker):
                 
                 if not rows:
                     logger.warning(f"No data rows found for {ticker}")
+                    screenshot_path = output_dir / f"debug_{ticker}_no_rows.png"
+                    page.screenshot(path=str(screenshot_path))
+                    logger.warning(f"Screenshot saved to {screenshot_path}")
                     browser.close()
                     return 0
                 
-                data_rows = []
+                logger.info(f"Found {len(rows)} total rows in table for {ticker}")
                 
-                for row in rows:
+                data_rows = []
+                skipped_reasons = {
+                    'too_few_cells': 0,
+                    'dividend_split': 0,
+                    'missing_data': 0,
+                    'parse_error': 0
+                }
+                
+                for idx, row in enumerate(rows):
                     try:
                         # Get all cells in the row
                         cells = row.locator('td').all()
                         
                         if len(cells) < 7:  # Need at least 7 columns (Date, Open, High, Low, Close, Adj Close, Volume)
+                            skipped_reasons['too_few_cells'] += 1
+                            if idx < 3:  # Log first few rows for debugging
+                                logger.debug(f"Row {idx}: Only {len(cells)} cells found, need 7")
                             continue
                         
                         # Extract cell values
@@ -113,6 +133,9 @@ def yahoofinance_scraper(ticker):
                         
                         # Skip rows that aren't data (like "Dividend" or other labels)
                         if not date or 'dividend' in date.lower() or 'split' in date.lower():
+                            skipped_reasons['dividend_split'] += 1
+                            if idx < 3:
+                                logger.debug(f"Row {idx}: Skipped dividend/split row with date: {date}")
                             continue
                         
                         open_price = cells[1].inner_text().strip()
@@ -122,9 +145,9 @@ def yahoofinance_scraper(ticker):
                         adj_close = cells[5].inner_text().strip()
                         volume = cells[6].inner_text().strip()
                         
-                        # Skip rows with missing data (marked as '-')
-                        if '-' in [open_price, high_price, low_price, close_price, adj_close, volume]:
-                            continue
+                        # Log first few rows for debugging
+                        if idx < 3:
+                            logger.debug(f"Row {idx} data: Date={date}, Open={open_price}, High={high_price}, Low={low_price}, Close={close_price}, Adj={adj_close}, Vol={volume}")
                         
                         data_rows.append({
                             'Date': date,
@@ -137,7 +160,9 @@ def yahoofinance_scraper(ticker):
                         })
                         
                     except Exception as e:
-                        logger.debug(f"Error parsing row for {ticker}: {e}")
+                        skipped_reasons['parse_error'] += 1
+                        if idx < 3:
+                            logger.warning(f"Row {idx}: Error parsing - {e}")
                         continue
                 
                 browser.close()
