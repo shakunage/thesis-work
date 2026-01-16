@@ -214,5 +214,6 @@ data/models/
 
 # data folder
 scraping/output_data/
+panel_data_analysis/data
 *.pkl
 *.csv
