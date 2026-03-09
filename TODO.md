@@ -1,7 +1,28 @@
 ## main todos
-- siisti repoa
-- control variables are all collected. next: thesis writing → preprocessing the data → language modeling
-- write a chapter about data collection into the methodology section
-- fix the literature review according to the advice by pekka
+- write a short summary about control variables, whether its a problem or not that they're collinear?
+- when time: add wisdom of crowds stuff
+- translate financialphrasebank, finsentiment using the gemini available thru colab
+- collate a sample dataset from mined sentiment data
+- do a quick review of settings for modernbert training
 
-stuff to do for the coming weeks: write justification for methodology
+- then move to consructing the sentiment variable
+  - models: finbert, modernbert, xlm-roberta, etc.
+  - datasets: finnsentiment and financialsentiment (translated), mix of both
+  - include some samples how the best model performs on the actual data
+
+- target + control variable data is ready for now. 
+- no need to tinker with it, just focus on constructing sentiment + writing the thesis for now
+
+FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset in a separate notebook. also, do some major organization for notebooks. 
+
+### PEKKA 3/6 RESPONSE TODOs
+
+#### Literature review
+- Laajuus on riittävä, mutta nyt kannattaisi keskittyä enemmän sen perusteella tehtäviin johtopäätöksiin
+    - mitä juuri tästä kirjallisuudesta seuraa oman tutkimuksesi asetelmalle
+    - miksi tietyt kontrollimuuttujat, viiveet tai estimointimenetelmät ovat perusteltuja
+    - mitä aikaisemman kirjallisuuden perusteella pitäisi odottaa (“hypoteesit” / odotukset tuloksista, joihin voi sitten verrata varsinaisia empiirisiä tuloksia)
+- NLP-kirjallisuuden osalta riittää, että perustelet, miksi suomenkielinen sijoittajateksti on haastavaa ja miksi sentimentin huolellinen mittaaminen on tarpeen. Tässä ei tarvitse tavoitella liian laajaa benchmark-vertailua.
+
+#### Data and Methodology
+- Tämä on ihan hyvällä pohjalla mutta kannattaa vielä lisätä joitakin tarkennuksia mm. miten sisältö yhdistetään yhtiöihin; miten käsitellään päivät jolloin sisältöä ei ole; entä viikonloput ja pörssin kiinnioloajat
