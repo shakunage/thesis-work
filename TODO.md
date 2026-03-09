@@ -13,7 +13,7 @@
 - target + control variable data is ready for now. 
 - no need to tinker with it, just focus on constructing sentiment + writing the thesis for now
 
-FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset in a separate notebook. also, do some major organization for notebooks. 
+FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset in a separate notebook. also, do some major organization for notebooks. gobble up all data used in panel data analysis into a .pkl and push to github. 
 
 ### PEKKA 3/6 RESPONSE TODOs
 
