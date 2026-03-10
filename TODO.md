@@ -1,20 +1,19 @@
 ## main todos
 - write a short summary about control variables, whether its a problem or not that they're collinear?
-- when time: add wisdom of crowds stuff
 - beef up finnish portion of literature review NLP segment
-- translate financialphrasebank, finsentiment using the gemini available thru colab
-- collate a sample dataset from mined sentiment data
+- add wisdom of crowds stuff
 - do a quick review of settings for modernbert training
 
 - then move to consructing the sentiment variable
   - models: finbert, modernbert, xlm-roberta, etc.
-  - datasets: finnsentiment, financialsentiment and financialphrasbank (translated)
+  - datasets: finnsentiment, financialsentiment and financialphrasbank (translated thru gemini)
   - include some samples how the best model performs on the actual data
+  - label sentiment pieces manually, use random sampling until rarest class hits 150 labeled texts
 
 - target + control variable data is ready for now. 
 - no need to tinker with it, just focus on constructing sentiment + writing the thesis for now
 
-FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset in a separate notebook. 
+FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset and an evaluation dataset in a separate notebook. 
 
 ### PEKKA 3/6 RESPONSE TODOs
 
