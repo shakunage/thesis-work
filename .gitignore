@@ -214,7 +214,8 @@ data/models/
 
 # data folder
 scraping/output_data/
-panel_data_analysis/data
+panel_data_analysis/data/*
+!panel_data_analysis/data/stock_data_full.parquet
 sentiment/data
 *.pkl
 *.csv
