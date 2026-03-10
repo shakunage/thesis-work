@@ -1,7 +1,5 @@
 ## main todos
 - write a short summary about control variables, whether its a problem or not that they're collinear?
-- beef up finnish portion of literature review NLP segment
-- add wisdom of crowds stuff
 - do a quick review of settings for modernbert training
 
 - then move to consructing the sentiment variable
