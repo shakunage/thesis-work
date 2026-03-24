@@ -217,5 +217,6 @@ scraping/output_data/
 panel_data_analysis/data/*
 !panel_data_analysis/data/stock_data_full.parquet
 sentiment/data
+sentiment-labeling/data
 *.pkl
 *.csv

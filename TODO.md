@@ -1,26 +1,17 @@
 ## main todos
-- write a short summary about control variables, whether its a problem or not that they're collinear?
-- do a quick review of settings for modernbert training
 
-- then move to consructing the sentiment variable
-  - models: finbert, modernbert, xlm-roberta, etc.
-  - datasets: finnsentiment, financialsentiment and financialphrasbank (translated thru gemini)
-  - include some samples how the best model performs on the actual data
-  - label sentiment pieces manually, use random sampling until rarest class hits 150 labeled texts
+- add fig for training/eval pipeline
+- add results
+- cleanup github (add setfit and megatron failures)
+- apply labels across all data
+- message pekka :D
 
-- target + control variable data is ready for now. 
-- no need to tinker with it, just focus on constructing sentiment + writing the thesis for now
-
-FIRST THINGS FIRST: download financial phrase bank, finsentiment. then translate them. cook up a training dataset and an evaluation dataset in a separate notebook. 
 
 ### PEKKA 3/6 RESPONSE TODOs
 
 #### Literature review
 - Laajuus on riittävä, mutta nyt kannattaisi keskittyä enemmän sen perusteella tehtäviin johtopäätöksiin
-    - mitä juuri tästä kirjallisuudesta seuraa oman tutkimuksesi asetelmalle
-    - miksi tietyt kontrollimuuttujat, viiveet tai estimointimenetelmät ovat perusteltuja
     - mitä aikaisemman kirjallisuuden perusteella pitäisi odottaa (“hypoteesit” / odotukset tuloksista, joihin voi sitten verrata varsinaisia empiirisiä tuloksia)
-- NLP-kirjallisuuden osalta riittää, että perustelet, miksi suomenkielinen sijoittajateksti on haastavaa ja miksi sentimentin huolellinen mittaaminen on tarpeen. Tässä ei tarvitse tavoitella liian laajaa benchmark-vertailua.
 
 #### Building the sentiment variable
 
